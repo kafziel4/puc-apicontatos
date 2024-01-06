@@ -1,18 +1,11 @@
-const insere = () => {};
+const db = require('../utils/db');
+
+const insere = (obj, callback) => {
+  db.pessoasDB.insert(obj, callback);
+};
 
 const lista = (params, callback) => {
-  const fakeList = [
-    {
-      id: 5,
-      nome: 'Francis Ford Copolla',
-      email: 'copolla@hollywood.com',
-      telefone: '001-124-2111',
-      organizacao: null,
-      tags: ['cinema', 'trabalho'],
-    },
-  ];
-
-  callback(null, fakeList);
+  db.pessoasDB.find(params, callback);
 };
 
 const altera = () => {};

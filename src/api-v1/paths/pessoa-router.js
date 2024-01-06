@@ -13,6 +13,17 @@ const listaPessoas = (req, res, next) => {
   });
 };
 
+const inserePessoa = (req, res, next) => {
+  pessoaModel.insere(req.body, (err, newObj) => {
+    if (err) {
+      res.status(400).send(err.message);
+    }
+
+    res.json(newObj);
+  });
+};
+
 pessoaRouter.get('/', listaPessoas);
+pessoaRouter.post('/', inserePessoa);
 
 module.exports = pessoaRouter;
