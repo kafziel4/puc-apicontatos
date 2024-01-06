@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "a922abee-c2a9-47d0-9014-e8fd69741325",
+		"name": "API Contatos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20746734"
+	},
+	"item": [
+		{
+			"name": "Lista Pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/pessoas",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insere Pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Francis Ford Coppola\",\r\n\t\"email\": \"coppola@hollywood.com\",\r\n\t\"telefone\": \"001-124-2111\",\r\n\t\"organizacao\": null,\r\n\t\"tags\": [\r\n\t\t\"cinema\",\r\n\t\t\"trabalho\"\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/pessoas",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
